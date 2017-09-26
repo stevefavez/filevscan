@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  virusfilescanner:
+    container_name: virusfilescanner
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - 8080:8080
+    links:
+    - clamavd:clamavd
+    env_file: environment-local
+    labels:
+    - com.docker.ucp.access.label=local
+    restart: always
+  clamavd:
+    container_name: clamavd
+    image: dinkel/clamavd
+    ports:
+     - 3310:3310

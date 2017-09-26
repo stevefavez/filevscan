@@ -1,0 +1,4 @@
+SERVICE_NAME=keycloak_jboss-local_node
+# Divers
+DEBUG_MODE=true
+# Application server

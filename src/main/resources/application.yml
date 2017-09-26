@@ -1,0 +1,9 @@
+spring:
+ http:
+  multipart:
+   max-file-size: 100MB
+   max-request-size: 100MB
+clamd:
+  host: clamavd
+  port: 3310
+  timeout: 500
